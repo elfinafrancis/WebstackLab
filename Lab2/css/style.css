@@ -66,7 +66,7 @@ h1{
 }
 
 #showcase{
-	background-image:url('pic.JPG');
+	background-image:url("pic.JPG");
 	background-position:top;
 	min-height: 300px;
 	margin-bottom: 30px;
