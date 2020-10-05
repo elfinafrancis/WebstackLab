@@ -25,6 +25,17 @@ h1{
 	overflow:hidden;
 }
 
+.bag{
+	text-align: center;
+}
+
+.button{
+	background-color: #8B4513;
+	color: #fff;
+	padding: 10px 15px;
+	text-align: center;
+}
+
 #main-header{
 	background-color:#8B4513;
 	color:#FFDEAD;
@@ -55,10 +66,10 @@ h1{
 }
 
 #showcase{
-	background-image:url("pic.JPG");
+	background-image:url('pic.jpg');
 	background-position:top;
-	min-height:300px;
-	margin-bottom:30px;
+	min-height: 300px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 
@@ -72,10 +83,37 @@ h1{
 #sidebar{
 	float:right;
 	width:30%;
-	background: #CD853F;
-	color:#fff;
-	padding:10px;
-	box-sizing: border-box;
+	background:#CD853F;
+	opacity: 60%;
+	color:black;
+	padding-bottom:50px;
+	text-align: center;
+	text-decoration: bold;
+
+}
+
+.location ul{
+	padding: 5px 50px 20px 50px;
+}
+
+.location a{
+	text-decoration: none;
+	color: #8B4513
+}
+
+.location a:hover{
+	color:red;
+}
+
+/*
+.location a:visited{
+	color:green;
+}
+*/
+
+.location li{
+	padding-bottom: 6px;
+	list-style-image: url('loc.png') ;
 }
 
 #main-footer{
@@ -84,6 +122,11 @@ h1{
 	text-align: center;
 	padding:8px;
 	margin-top:20px;
+}
+
+.btn:hover {
+  transform: rotateY(180deg);
+  background: white;
 }
 
 @media(max-width:600px){
