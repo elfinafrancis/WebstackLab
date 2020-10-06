@@ -65,6 +65,10 @@ h1{
 	justify-content: space-around;
 }
 
+#navbar a:hover{
+	color: yellow;
+}
+
 #showcase{
 	background-image:url("pic.JPG");
 	background-position:top;
@@ -101,15 +105,9 @@ h1{
 	color: #8B4513
 }
 
-.location a:hover{
-	color:red;
-}
-
-/*
 .location a:visited{
 	color:green;
 }
-*/
 
 .location li{
 	padding-bottom: 6px;
