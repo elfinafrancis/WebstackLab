@@ -124,9 +124,33 @@ h1{
 	margin-top:20px;
 }
 
-.btn:hover {
-  transform: rotateY(180deg);
+.vid:hover {
   background: white;
+  text-decoration: none;
+}
+
+.anim{
+	color: black;
+	font-style: bold;
+	font-family: sans-serif;
+	padding-top: 30px;
+	margin: 20px;
+	text-align: center;
+	background: white;
+	width: 400px;
+	height: 100px;
+	position: relative;
+	animation-name: myanim;
+	animation-duration: 10s;
+}
+
+@keyframes myanim{
+	0% {background-color: yellow; left: 0px;}
+	20% {background-color: green; left: 200px;}
+	40% {background-color: blue; left: 400px;}
+	60% {background-color: purple; left: 800px;}
+	80% {background-color: red; left: 400px;}
+	100% {background-color: yellow; left: 0px;}
 }
 
 @media(max-width:600px){
