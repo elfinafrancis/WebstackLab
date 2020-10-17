@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/propahShop" 
+xmlns:tns="http://www.example.org/propahShop" 
+elementFormDefault="qualified">
+
+<complexType name="Items">
+<sequence>
+<element name="Product" type="xs:string"></element>
+<element name="Brand" type="xs:string"></element>
+<element name="Price" type="xs:integer"></element>
+<element name="Size" type="xs:integer"></element>
+<element name="Colour" type="xs:string"></element>
+<element name="Code" type="xs:string"></element>
+</sequence>
+</complexType>
+
+<complexType name="Customer">
+<sequence>
+  <element name="Name" type="xs:Name"/>
+  <element name="Gender" type="xs:Gender"/>
+  <element name="Age" type="xs:Age"/>
+  <element name="State" type="xs:State"/>
+  <element name="Nationality" type="xs:Nationality"/>
+</sequence>
+</complexType>
+
+<simpleType name="Name">
+<restriction base="string">
+</restriction>
+</simpleType>
+
+<simpleType name="Gender">
+<restriction base="string">
+</restriction>
+</simpleType>
+
+<simpleType name="Age">
+<restriction base="integer">
+<minInclusive value="5"></minInclusive>
+<maxInclusive value="80"></maxInclusive>
+</restriction>
+</simpleType>
+
+<simpleType name="State">
+<restriction base="string">
+</restriction>
+</simpleType>
+
+<simpleType name="Nationality">
+<restriction base="string">
+</restriction>
+</simpleType>
+
+
+
+
