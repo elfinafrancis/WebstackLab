@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="propahShop.xsl"?>
+<Shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="propahShop.xsd">
+
+<Items>
+    <Product>Tunic</Product>
+    <Brand>Indya</Brand>
+    <Price>399</Price>
+    <Size>M</Size>
+    <Colour>Pink</Colour>
+    <Code>324</Code>
+</Items>
+<Customer>
+    <Name>Ann Mary</Name>
+    <Gender>Female</Gender>
+    <Age>20</Age>
+    <State>Kerala</State>
+    <Nationality>Indian</Nationality>
+</Customer>
+
+<Items>
+    <Product>Jeans</Product>
+    <Brand>Levis</Brand>
+    <Price>999</Price>
+    <Size>L</Size>
+    <Colour>Blue</Colour>
+    <Code>365</Code>
+</Items>
+<Customer>
+    <Name>Kshitij</Name>
+    <Gender>Male</Gender>
+    <Age>34</Age>
+    <State>Rajasthan</State>
+    <Nationality>Indian</Nationality>
+</Customer>
+
+<Items>
+    <Product>Kurti</Product>
+    <Brand> Melange</Brand>
+    <Price>699</Price>
+    <Size>L</Size>
+    <Colour>Grey</Colour>
+    <Code>924</Code>
+</Items>
+<Customer>
+    <Name>Sharika</Name>
+    <Gender>Female</Gender>
+    <Age>21</Age>
+    <State>Karnataka</State>
+    <Nationality>Indian</Nationality>
+</Customer>
+
+<Items>
+    <Product>Lehenga</Product>
+    <Brand> Soch</Brand>
+    <Price>3499</Price>
+    <Size>M</Size>
+    <Colour>Green</Colour>
+    <Code>245</Code>
+</Items>
+<Customer>
+    <Name>Kriti</Name>
+    <Gender>Female</Gender>
+    <Age>18</Age>
+    <State>Uttar Pradesh</State>
+    <Nationality>Indian</Nationality>
+</Customer>
+
+<Items>
+    <Product>Shirt</Product>
+    <Brand> Peter England</Brand>
+    <Price>1299</Price>
+    <Size>XL</Size>
+    <Colour>White</Colour>
+    <Code>674</Code>
+</Items>
+<Customer>
+    <Name>Pranav</Name>
+    <Gender>Male</Gender>
+    <Age>43</Age>
+    <State>Kerala</State>
+    <Nationality>Indian</Nationality>
+</Customer>
+
+</Shop>
