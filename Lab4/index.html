@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<title>Sign up</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script> 
+function validation()                                    
+{ 
+    var name = document.forms["Form"]["Name"]; 
+    var dob = document.forms["Form"]["Date of birth"];
+    var gender =  document.forms["Form"]["Gender"];
+    var phone = document.forms["Form"]["Phone"];              
+    var email = document.forms["Form"]["Email"];    
+    var password = document.forms["Form"]["Password"];
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    }
+
+    if (dob.value == "")                                  
+    { 
+        window.alert("Please enter your date of birth"); 
+        dob.focus(); 
+        return false; 
+    } 
+
+    if (gender.selectedIndex < 1)                  
+    { 
+        alert("Please choose your gender"); 
+        gender.focus(); 
+        return false; 
+    } 
+
+    if (phone.value == "")                           
+    { 
+        window.alert("Please enter your phone number."); 
+        phone.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+
+    if (password.value == "")                        
+    { 
+        window.alert("Please set your password"); 
+        password.focus(); 
+        return false; 
+    } 
+    return true; 
+}
+</script> 
+</head> 
+   
+<body> 
+<h1>Sign up</h1>           
+<form class=container name="Form" action="/submit.php" onsubmit="return validation()" method="post">  
+      
+    <p>Name: <br><input type="text" size=50 name="Name" placeholder="Name"> </p><br> 
+    <p>Date of birth: <br><input type="date" size=50 name="Date of birth"> </p><br> 
+    <p>Gender:     
+        <select type="text" value="" name="Gender"> 
+            <option>Select</option>
+            <option>Male</option> 
+            <option>Female</option> 
+            <option>Other</option>
+        </select></p><br>          
+    <p>Phone Number: <br><input type="tel" size=50 name="Phone" placeholder="Phone number" pattern="[0-9]{10}" title="Must contain 10 digits"></p><br>
+    <p>E-mail ID: <br><input type="email" size=50 name="Email" placeholder="Email"></p><br> 
+    <p>Password: <br><input type="password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase letter, one lowercase letter, and at least 8 or more characters"></p><br>
+
+    <p><input class="button" type="submit" value="Submit" name="Submit">     
+       <input class="button" type="reset" value="Reset" name="Reset">   
+    </p>
+        
+</form> 
+</body> 
+</html> 
