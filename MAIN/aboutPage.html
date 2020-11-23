@@ -38,32 +38,45 @@
 	<br>
 
 	<div class="container">
-		<table>
-		<thead>
-			<tr>
-				<th> Name</th>
-				<th> Email</th>
-				<th> Workplace</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Sam</td>
-				<td>samps@gmail.com</td>
-				<td>Pune</td>
-			</tr>
-			<tr>
-				<td>Aashita</td>
-				<td>aashitaps@gmail.com</td>
-				<td>Bangalore</td>
-			</tr>
-			<tr>
-				<td>Simren</td>
-				<td>simrenps@gmail.com</td>
-				<td>Chennai</td>
-			</tr>
-		</tbody>
-	</table>
+		<button type="button" onclick="loadXML()">Branch Details</button>
+    <br><br>
+    <table id="demo"></table>
+    <script>
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","dom.xml",false);
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>NAME</th><th>EMAIL</th><th>AREA</th><th>MOB NO.</th></tr>";
+            var x=xmlDoc.getElementsByTagName("branch");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("area")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("phone")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+
+    </script>
 
 	<br>
 	<br>

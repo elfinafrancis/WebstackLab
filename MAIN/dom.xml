@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+	<branch>
+		<name>Sam</name>
+		<email>samps@gmail.com</email>
+		<area>Pune</area>
+		<phone>8884548020</phone>
+	</branch>
+	<branch>
+		<name>Aashita</name>
+		<email>aashitaps@gmail.com</email>
+		<area>Bangalore</area>
+		<phone>9898342909</phone>
+	</branch>
+	<branch>
+		<name>Simren</name>
+		<email>simrenps@gmail.com</email>
+		<area>Chennai</area>
+		<phone>6361388299</phone>
+	</branch>
+</company>
+
+
