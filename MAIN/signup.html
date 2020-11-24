@@ -14,6 +14,7 @@ function saveCookies()
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_email"] = document.getElementById("email").value;
   myCookies["_password"] = document.getElementById("password").value.toString();
+  myCookies["confirm_password"] = document.getElementById("confirm_password").value.toString();
 
   document.cookie = "";
   var expiresAttrib = new Date(Date.now()+60*1000).toString();
@@ -43,6 +44,7 @@ function loadCookies()
   document.getElementById("phone").value = myCookies["_phone"];
   document.getElementById("email").value = myCookies["_email"];
   document.getElementById("password").value = myCookies["_password"];
+  document.getElementById("confirm_password").value = myCookies["confirm_password"];
 }
 
 function validation()                                    
@@ -53,6 +55,7 @@ function validation()
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_email"] = document.getElementById("email").value;
   myCookies["_password"] = document.getElementById("password").value;
+  myCookies["confirm_password"] = document.getElementById("confirm_password").value;
 
     if (user.value == "")                                  
     {
@@ -95,7 +98,25 @@ function validation()
         password.focus();
         return false;
     }
+
+    if (confirm_password.value == "")                        
+    {
+        window.alert("Please confirm your password");
+        confirm_password.focus();
+        return false;
+    }
     return true;
+}
+
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'PASSWORDS MATCH';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'PASSWORDS DO NOT MATCH';
+  }
 }
 
 </script>
@@ -116,15 +137,18 @@ function validation()
 <p>Phone Number<br><input type="tel" id="phone" placeholder="Phone number" pattern="[0-9]{10}" title="Must contain 10 digits"></p></br>
 <p>Email ID<br><input type="email" id="email" placeholder="Email ID"></p></br>
 <p>Password<br><input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase letter, one lowercase letter, and at least 8 or more characters"></p></br>
-<button onclick="saveCookies()">Save information</button>
-<button onclick="loadCookies()">Load information</button>
-
-<p id="out"></p>
-
+<p>Confirm Password<br><input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" onkeyup='check();'></p>
+<span id='message'></span>
+<br>
 <p><input class="button" type="submit" value="Submit" name="Submit">    
     <input class="button" type="reset" value="Reset" name="Reset">  
 </p>
-
 </form>
+<div>
+  <button onclick="saveCookies()">Save information</button>
+  <button onclick="loadCookies()">Load information</button>
+  <p id="out"></p>
+</div>
+
 </body>
 </html>
