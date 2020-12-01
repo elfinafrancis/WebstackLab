@@ -118,11 +118,12 @@ var check = function() {
     document.getElementById('message').innerHTML = 'PASSWORDS DO NOT MATCH';
   }
 }
-
 </script>
 </head>
+
 <body>
   <h1>Sign up</h1>
+  
 <form class=container name="Form" action="/submit.php" onsubmit="return validation()" method="post">
 <p>Name<br><input type="text" id="user" placeholder="Name"></p></br>
 <p>Date of Birth<br><input type="date" id="age" placeholder="Date of birth"></p></br>
@@ -149,6 +150,5 @@ var check = function() {
   <button onclick="loadCookies()">Load information</button>
   <p id="out"></p>
 </div>
-
 </body>
 </html>
