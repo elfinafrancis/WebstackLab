@@ -12,7 +12,7 @@ function validation()
     var phone = document.forms["Form"]["Phone"];              
     var email = document.forms["Form"]["Email"];    
     var password = document.forms["Form"]["Password"];
-    var confirm_password = document.forms["Form"]["Confirm Password"];
+    var cpassword = document.forms["Form"]["Confirm Password"];
    
    
     if (name.value == "")                                  
@@ -57,10 +57,10 @@ function validation()
         return false; 
     } 
 
-    if (confirm_password.value == "")                        
+    if (cpassword.value == "")                        
     {
         window.alert("Please confirm your password");
-        confirm_password.focus();
+        cpassword.focus();
         return false;
     }
     return true; 
@@ -95,7 +95,7 @@ var check = function() {
     <p>Phone Number: <br><input type="tel" size=50 name="Phone" placeholder="Phone number" pattern="[0-9]{10}" title="Must contain 10 digits"></p><br>
     <p>E-mail ID: <br><input type="email" size=50 name="Email" placeholder="Email"></p><br> 
     <p>Password: <br><input type="password" name="Password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase letter, one lowercase letter, and at least 8 or more characters"></p><br>
-    <p>Confirm Password<br><input type="password" name="Confirm password" placeholder="Confirm password" onkeyup='check();'></p>
+    <p>Confirm Password<br><input type="password" name="cpassword" placeholder="Confirm password" onkeyup='check();'></p>
     <span id='message'></span>
     <br>
 
