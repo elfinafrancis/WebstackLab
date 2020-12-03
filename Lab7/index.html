@@ -31,6 +31,7 @@
                     document.getElementById("price").innerHTML=obj.price;
                     document.getElementById("colour").innerHTML=obj.colour;
                     document.getElementById("mat").innerHTML=obj.mat;
+                    document.getElementById("stock").innerHTML=obj.stock;
                 }
             };
             request.open("GET","wsd.json",true);
@@ -54,6 +55,7 @@
     Price:<span id="price"></span><br>
     Colour:<span id="colour"></span><br>
     Material:<span id="mat"></span><br>
+    Pieces left:<span id="stock"></span><br>
     
 </body>
 </html>
