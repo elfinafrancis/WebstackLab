@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="filter_app.js"></script>
+    <link href="filter.css" rel="stylesheet">
+</head>
+<body ng-app="MyApp">
+    <div ng-controller="MyCtrl">
+        Rows to Display:<input type="number" step="1" min="0" max="4" ng-model="rowlimit" />
+        <br \>
+        <br \>
+
+        Search:<input type="text" placeholder="Seach Customer" ng-model="Search" />
+        <br \>
+        <br \>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>State</th>
+                <th>Email ID</th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="customer in customers | limitTo:rowlimit |filter:Search ">
+                    <td>{{customer.name | uppercase}}</td>
+                    <td>{{customer.dob | date:"dd/MM/yyyy"}}</td>
+                    <td>{{customer.gender | lowercase}}</td>
+                    <td>{{customer.state | uppercase}}</td>
+                    <td>{{customer.phone | number}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
