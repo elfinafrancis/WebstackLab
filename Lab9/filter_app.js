@@ -2,10 +2,10 @@ angular.module('myapp',[])
 .controller('myctrl',function($scope)
 {
     $scope.listProduct=[
-        {id:'P01',name:'Skirt',price:5000,piece:72},
-        {id:'P02',name:'Swearer',price:3455,piece:48},
-        {id:'P03',name:'Shirt',price:4205,piece:36},
-        {id:'P04',name:'Jeans',price:2000,piece:24}
+        {id:'P01',name:'Skirt',price:900,piece:72},
+        {id:'P02',name:'Swearer',price:2199,piece:48},
+        {id:'P03',name:'Shirt',price:1299,piece:36},
+        {id:'P04',name:'Jeans',price:2399,piece:24}
     ];
     $scope.save=function()
     {
