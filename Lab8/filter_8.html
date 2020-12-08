@@ -7,6 +7,9 @@
     <script src="angular.min.js"></script>
     <script src="filter_app.js"></script>
     <link href="filter.css" rel="stylesheet">
+
+        <h1>Product Details</h1>
+
 </head>
 <body ng-app="MyApp">
     <div ng-controller="MyCtrl">
@@ -14,28 +17,29 @@
         <br \>
         <br \>
 
-        Search:<input type="text" placeholder="Seach Customer" ng-model="Search" />
+        Search:<input type="text" placeholder="Seach Products" ng-model="Search" />
         <br \>
         <br \>
         <table>
             <tr>
-                <th>Name</th>
-                <th>DOB</th>
-                <th>Gender</th>
-                <th>State</th>
-                <th>Email ID</th>
+                <th>Product</th>
+                <th>Brand</th>
+                <th>Material</th>
+                <th>Colour</th>
+                <th>Price</th>
+               
             </tr>
             <tbody>
-                <tr ng-repeat="customer in customers | limitTo:rowlimit |filter:Search ">
-                    <td>{{customer.name | uppercase}}</td>
-                    <td>{{customer.dob | date:"dd/MM/yyyy"}}</td>
-                    <td>{{customer.gender | lowercase}}</td>
-                    <td>{{customer.state | uppercase}}</td>
-                    <td>{{customer.phone | number}}</td>
+                <tr ng-repeat="product in product | limitTo:rowlimit |filter:Search ">
+                    <td>{{product.item| uppercase}}</td>
+                    <td>{{product.brand| uppercase}}</td>
+                    <td>{{product.material | lowercase}}</td>
+                    <td>{{product.colour| lowercase}}</td>
+                    <td>{{product.price | currency:"&#8377;":0 }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    
+   
 </body>
 </html>
